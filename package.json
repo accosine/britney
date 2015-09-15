@@ -4,12 +4,14 @@
   "description": "A minimal td game",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack-dev-server --host 0.0.0.0 --content-base ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "script-loader": "^0.6.1",
-    "webpack": "^1.12.1"
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.11.0"
   }
 }
