@@ -4,9 +4,13 @@
     "browser": true,
     "es6": true
   },
+  "globals": {
+      "Phaser": false
+  },
   "rules": {
     "comma-dangle": 0,
+    "spaced-comment": 0,
     "no-console": 0,
-    "id-length": [2, {"exceptions": ["x", "y"]}]
+    "id-length": [2, {"exceptions": ["x", "y", "i", "j"]}]
   },
 }

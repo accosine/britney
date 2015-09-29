@@ -11,9 +11,16 @@ module.exports = {
     loaders: [
       { test: /pixi.js/, loader: "script" },
       { test: /phaser.js/, loader: "script" },
-      { test: /easystar.js/, loader: "script" },
-      { test: /main.js/, loader: "script" },
-      { test: /main.js/, loader: "babel" }
+      { test: /main.js/, loader: "babel" },
+      {
+        test: /\.js$/,
+        loader: ['babel'],
+        exclude: [/node_modules/, /lib/],
+        query: {
+          optional: ['runtime'],
+          stage: 0
+        }
+      }
     ]
   }
 
