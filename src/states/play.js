@@ -17,6 +17,15 @@ let map = [];
 export default class Play extends Phaser.State {
 
   create() {
+    //this.game.physics.startSystem(Phaser.Physics.ARCADE);
+    let beholder = this.game.add.sprite(50, 50, 'rbeholder');
+    beholder.anchor.setTo(0.5, 0.5);
+    beholder.animations.add('walk', Phaser.Animation.generateFrameNames('beholder/walk/', 0, 1, '', 1), 5, true, false);
+    beholder.animations.play('walk');
+
+    this.game.physics.arcade.enable([ beholder ], Phaser.Physics.ARCADE);
+    this.game.add.tween(beholder.body).to( { y: 300 }, 3000, Phaser.Easing.Linear.None, true);
+
     this.game.input.onTap.add(this.handleTap);
     towerGroup = this.game.add.group();
     pathGroup = this.game.add.group();

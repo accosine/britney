@@ -73,4 +73,4 @@ TBD
   - map
     - zoom out/in
 
-
+britney assets (/assets) are registered under a CC-BY-SA 3.0 license, meaning that you are free to redistribute or edit any part of this tileset as long as you do not take the credit for it. If you use the assets you must accredit DawnBringer (DragonDePlatino@gmail.com).
