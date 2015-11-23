@@ -1,0 +1,52 @@
+{"frames": {
+
+"axe.png":
+{
+	"frame": {"x":69,"y":1,"w":14,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":14},
+	"sourceSize": {"w":14,"h":14}
+},
+"beholder/beholder0.png":
+{
+	"frame": {"x":1,"y":1,"w":16,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
+	"sourceSize": {"w":16,"h":16}
+},
+"beholder/beholder1.png":
+{
+	"frame": {"x":51,"y":1,"w":16,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":14},
+	"sourceSize": {"w":16,"h":14}
+},
+"floor.png":
+{
+	"frame": {"x":19,"y":1,"w":16,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
+	"sourceSize": {"w":16,"h":16}
+},
+"tower.png":
+{
+	"frame": {"x":37,"y":1,"w":12,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":15},
+	"sourceSize": {"w":12,"h":15}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "britneysprites.png",
+	"format": "RGBA8888",
+	"size": {"w":84,"h":18},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:bea1026e5eaf066f8209f6365df29b2d:7d15c44cde25d6b14638440d19aac61f:29112c987cdee5e1637658f836710f56$"
+}
+}
