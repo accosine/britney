@@ -1,7 +1,6 @@
 export default function() {
-  this.floor = this.game.add.tileSprite(0, 0, 800, 600, 'britneysprites');
-  this.floor.frameName = 'floor';
-  this.floor.scale.set(3, 3);
+  this.floor = this.game.add.tileSprite(0, 0, 600, 600, 'britneysprites', 'floor');
+  //this.floor.scale.set(3, 3);
 
   this.beholder = this.game.add.sprite(-50, -50, 'britneysprites');
   this.beholder.scale.set(2, 2);

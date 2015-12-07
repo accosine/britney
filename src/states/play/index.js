@@ -1,9 +1,10 @@
 import init from './init';
 import preload from './preload';
 import create from './create';
+import update from './update';
 import render from './render';
 import { startPathfinding, insertPathPoint } from './path';
-import { insertTower, handleTowerTap } from './tower';
+import { insertTower, handleTowerTap, fire, bulletHitsBeholder } from './tower';
 import { cellsToPixels, pixelsToCells } from './util';
 
 export default class Play extends Phaser.State {
@@ -13,10 +14,13 @@ export default class Play extends Phaser.State {
     this.init = init;
     this.preload = preload;
     this.create = create;
+    this.update = update;
     this.render = render;
     this.startPathfinding = startPathfinding;
     this.insertPathPoint = insertPathPoint;
     this.insertTower = insertTower;
+    this.bulletHitsBeholder = bulletHitsBeholder;
+    this.fire = fire;
     this.handleTowerTap = handleTowerTap;
     this.cellsToPixels = cellsToPixels;
     this.pixelsToCells = pixelsToCells;
@@ -26,7 +30,6 @@ export default class Play extends Phaser.State {
   handleTap = (pointer) => {
     const [col, row] = this.pixelsToCells(pointer.x, pointer.y);
     if (col > 11 ) return;
-    console.log(`Column: ${col}\t Row: ${row}`);
 
     if (!this.map[row][col]) {
       this.map[row][col] = 1;

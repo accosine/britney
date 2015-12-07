@@ -17,7 +17,6 @@ export function startPathfinding() {
       console.log('The path to the destination point was not found.');
     }
     else {
-      //for (var i = 0; i < path.length; i++) {
       for (const point of path) {
         this.insertPathPoint(point.x, point.y);
         const [x, y] = this.cellsToPixels(point.x, point.y);
