@@ -9,6 +9,7 @@
   },
   "rules": {
     "comma-dangle": 0,
+    "brace-style": [2, "stroustrup"],
     "spaced-comment": 0,
     "no-console": 0,
     "id-length": [2, {"exceptions": ["x", "y", "i", "j"]}]
