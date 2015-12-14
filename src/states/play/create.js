@@ -17,9 +17,9 @@ export default function() {
   this.bullets.setAll('outOfBoundsKill', true);
   this.bullets.setAll('checkWorldBounds', true);
 
-  this.game.time.events.loop(Phaser.Timer.SECOND * 3, () => {
-    this.towerGroup.forEach((tower) => {
-      this.fire(tower);
-    });
-  }, this);
+  //this.game.time.events.loop(Phaser.Timer.SECOND * 3, () => {
+    //this.towerGroup.forEach((tower) => {
+      //this.fire(tower);
+    //});
+  //}, this);
 }

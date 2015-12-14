@@ -4,7 +4,8 @@ import create from './create';
 import update from './update';
 import render from './render';
 import { startPathfinding, insertPathPoint } from './path';
-import { insertTower, handleTowerTap, fire, bulletHitsBeholder } from './tower';
+//import { insertTower, handleTowerTap, fire, bulletHitsBeholder } from './tower';
+import Tower from './tower';
 import { cellsToPixels, pixelsToCells } from './util';
 
 export default class Play extends Phaser.State {
@@ -18,10 +19,10 @@ export default class Play extends Phaser.State {
     this.render = render;
     this.startPathfinding = startPathfinding;
     this.insertPathPoint = insertPathPoint;
-    this.insertTower = insertTower;
-    this.bulletHitsBeholder = bulletHitsBeholder;
-    this.fire = fire;
-    this.handleTowerTap = handleTowerTap;
+    //this.insertTower = insertTower;
+    //this.bulletHitsBeholder = bulletHitsBeholder;
+    //this.fire = fire;
+    //this.handleTowerTap = handleTowerTap;
     this.cellsToPixels = cellsToPixels;
     this.pixelsToCells = pixelsToCells;
   }
@@ -33,7 +34,8 @@ export default class Play extends Phaser.State {
 
     if (!this.map[row][col]) {
       this.map[row][col] = 1;
-      this.insertTower(col, row);
+      const tower = new Tower(this.game, pointer.x, pointer.y, { range: 100, damage: 50, cooldown: 500 });
+      //this.insertTower(col, row);
     }
   }
 
