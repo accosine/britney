@@ -1,3 +1,4 @@
-require('../lib/pixi.js');
-require('../lib/phaser.js');
-require('./main.js');
+import 'pixi';
+import 'p2';
+import "phaser";
+import './main.js';
