@@ -34,8 +34,8 @@ export default class Play extends Phaser.State {
 
     if (!this.map[row][col]) {
       this.map[row][col] = 1;
-      const tower = new Tower(this.game, pointer.x, pointer.y, { range: 100, damage: 50, cooldown: 500 });
-      //this.insertTower(col, row);
+      const tower = new Tower(this, col, row,
+        { range: 100, damage: 50, cooldown: 500 });
     }
   }
 

@@ -1,33 +1,26 @@
+import { cellsToPixels, pixelsToCells } from './util';
+
 export default class Tower extends Phaser.Sprite {
 
-  constructor(game, x, y, attributes) {
-    super(game, x, y, 'britneysprites', 'tower');
-    //this.game = game;
+  constructor(state, col, row, attributes) {
+    const [x, y] = cellsToPixels.bind(state)(col, row);
+    super(state.game, x, y, 'britneysprites', 'tower');
+    this.state = state;
     this.attributes = attributes;
-    this.lastShot = game.time.now;
-    //this.width = this.CELL_WIDTH;
-    //this.height = this.CELL_HEIGHT;
-    game.add.existing(this);
-    //this.insertTower(x, y);
+    this.lastShot = state.game.time.now;
+    this.width = state.CELL_WIDTH;
+    this.height = state.CELL_HEIGHT;
+    this.inputEnabled = true;
+    this.events.onInputUp.add(this.handleTowerTap, this);
+
+    state.game.add.existing(this);
   }
 
-  //insertTower(x, y) {
-    //console.log(this);
-    //const tower = this.game.add.sprite(x, y, 'britneysprites', 'tower');
-
-    //this.inputEnabled = true;
-    //this.events.onInputUp.add(this.handleTowerTap, this);
-    //this.width = this.CELL_WIDTH;
-    //this.height = this.CELL_HEIGHT;
-    ////this.towerGroup.children[this.towerGroup.length - 1].width = this.CELL_WIDTH;
-    ////this.towerGroup.children[this.towerGroup.length - 1].height = this.CELL_HEIGHT;
-  //}
-
-  //handleTowerTap() {
-    //const [col, row] = this.pixelsToCells(this.x, this.y);
-    //this.destroy();
-    //this.map[row][col] = 0;
-  //}
+  handleTowerTap() {
+    const [col, row] = pixelsToCells.bind(this.state)(this.x, this.y);
+    this.destroy();
+    this.state.map[row][col] = 0;
+  }
 
   //fire() {
     //// Grab the first bullet we can from the pool
@@ -44,9 +37,6 @@ export default class Tower extends Phaser.Sprite {
   //}
 
 }
-
-
-
 
 
 //export function insertTower(col, row) {
